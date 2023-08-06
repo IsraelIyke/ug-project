@@ -15,115 +15,92 @@ export default function Home() {
     { x: 4.75, y: 100 },
   ]);
 
-  const updateChart = (dataPoints) => {
-    const ctx = document.getElementById("psdChart").getContext("2d");
-    new Chart(ctx, {
-      type: "line",
-      data: {
-        datasets: [
-          {
-            label: "Particle Size Distribution",
-            data: dataPoints,
-            borderColor: "rgba(75, 192, 192, 1)",
-            fill: false,
-            tension: 0.4,
-          },
-        ],
-      },
-      options: {
-        scales: {
-          x: {
-            type: "logarithmic", // Use logarithmic scale for the particle size (microns) axis
-            position: "bottom",
-            title: {
-              display: true,
-              text: "Particle Size (mm)",
-            },
-            min: 0.1, // Set a minimum value for the logarithmic axis
-          },
-          y: {
-            type: "linear",
-            position: "left",
-            title: {
-              display: true,
-              text: "Cumulative Percentage Finer (%)",
-            },
-            min: 0,
-          },
-        },
-      },
-    });
-  };
+  // const updateChart = (dataPoints) => {
+  //   const ctx = document.getElementById("psdChart").getContext("2d");
+  //   new Chart(ctx, {
+  //     type: "line",
+  //     data: {
+  //       datasets: [
+  //         {
+  //           label: "Particle Size Distribution",
+  //           data: dataPoints,
+  //           borderColor: "rgba(75, 192, 192, 1)",
+  //           fill: false,
+  //           tension: 0.4,
+  //         },
+  //       ],
+  //     },
+  //     options: {
+  //       scales: {
+  //         x: {
+  //           type: "logarithmic", // Use logarithmic scale for the particle size (microns) axis
+  //           position: "bottom",
+  //           title: {
+  //             display: true,
+  //             text: "Particle Size (mm)",
+  //           },
+  //           min: 0.1, // Set a minimum value for the logarithmic axis
+  //         },
+  //         y: {
+  //           type: "linear",
+  //           position: "left",
+  //           title: {
+  //             display: true,
+  //             text: "Cumulative Percentage Finer (%)",
+  //           },
+  //           min: 0,
+  //         },
+  //       },
+  //     },
+  //   });
+  // };
 
-  useEffect(() => {
-    updateChart(dataPoints);
-  }, []);
+  // useEffect(() => {
+  //   updateChart(dataPoints);
+  // }, []);
 
   return (
-    <div className="min-h-screen bg-gray-100 flex flex-col justify-center items-center">
+    <div>
       <Head>
         <title>Particle Size Distribution Curve</title>
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       </Head>
-      <h1 className="text-3xl font-bold mb-4">Sieve Analysis Calculation</h1>
+      <h1
+        className="text-2xl font-bold mb-4 mt-4"
+        style={{ textAlign: "center" }}
+      >
+        Sieve Analysis Calculation
+      </h1>
       {/* a toogle will be here to change from fine aggregate to coarse aggregate */}
+
       <div className="particle-container">
-        <div>
-          <div>Sieve Size</div>
-          <div></div>
-          <div></div>
-          <div></div>
-          <div></div>
-          <div></div>
-          <div></div>
-          <div></div>
-          <div></div>
+        <div className="particle-sub-container particle-title">
+          <li>Sieve Size</li>
+          <li>Mass retained (g)</li>
+          <li>% mass retained</li>
+          <li>Cumulative % mass retained</li>
+          <li>Cumulative % mass passing</li>
         </div>
-        <div>
-          <div>Mass retained (g)</div>
-          <div></div>
-          <div></div>
-          <div></div>
-          <div></div>
-          <div></div>
-          <div></div>
-          <div></div>
-          <div></div>
-        </div>
-        <div>
-          <div>% mass retained</div>
-          <div></div>
-          <div></div>
-          <div></div>
-          <div></div>
-          <div></div>
-          <div></div>
-          <div></div>
-          <div></div>
-        </div>
-        <div>
-          <div>Cumulative % mass retained</div>
-          <div></div>
-          <div></div>
-          <div></div>
-          <div></div>
-          <div></div>
-          <div></div>
-          <div></div>
-          <div></div>
-        </div>
-        <div>
-          <div>Cumulative % mass passing</div>
-          <div></div>
-          <div></div>
-          <div></div>
-          <div></div>
-          <div></div>
-          <div></div>
-          <div></div>
-          <div></div>
+        <div className="particle-sub-container">
+          <li></li>
+
+          <li>
+            <input
+              placeholder="enter mass"
+              style={{
+                width: "100%",
+                paddingLeft: "0.5rem",
+                fontSize: "0.8rem",
+              }}
+            />
+          </li>
+          <li></li>
+          <li></li>
+          <li></li>
         </div>
       </div>
-      <main className="p-4 w-full max-w-xl flex flex-col items-center">
+      {/* <main className="p-4 w-full max-w-xl flex flex-col items-center">
         <h1 className="text-3xl font-bold mb-4">
           Particle Size Distribution Curve
         </h1>
@@ -147,7 +124,7 @@ export default function Home() {
             Download Chart
           </button>
         </div>
-      </main>
+      </main> */}
     </div>
   );
 }

@@ -1,11 +1,49 @@
-.particle-container {
+.particle-sub-container {
   display: flex;
   justify-content: center;
-  height: 20rem;
+  overflow-x: auto;
+  overflow-y: hidden;
+  list-style: none;
+  position: relative;
+  /* padding: 0 0.5rem 0 0.5rem; */
+  width: 98vw;
 }
-.particle-container div div {
-  background-color: hsl(43, 74%, 55%);
-  height: 2rem;
+.particle-sub-container li {
   width: 7rem;
-  margin: 0.1rem;
+  height: 2rem;
+  text-align: center;
+  background: hsl(43, 74%, 35%);
+  margin: 0.1rem 0;
+  padding: 0.5rem;
+  font-size: 0.9rem;
+}
+.particle-sub-container li:nth-child(2) {
+  background-color: hsl(43, 74%, 45%);
+}
+.particle-sub-container li:nth-child(3) {
+  background-color: hsl(43, 74%, 55%);
+}
+.particle-sub-container li:nth-child(4) {
+  background-color: hsl(43, 74%, 65%);
+}
+.particle-sub-container li:nth-child(5) {
+  background-color: hsl(43, 74%, 75%);
+}
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 70%;
+}
+.particle {
+  padding: 0 5% 0 5%;
+}
+td,
+th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
 }
