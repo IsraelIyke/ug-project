@@ -2,6 +2,7 @@
 import { useState, useEffect } from "react";
 import Head from "next/head";
 import { Chart } from "chart.js/auto";
+import "./page.css";
 
 export default function Home() {
   const [dataPoints, setDataPoints] = useState([
@@ -63,6 +64,65 @@ export default function Home() {
       <Head>
         <title>Particle Size Distribution Curve</title>
       </Head>
+      <h1 className="text-3xl font-bold mb-4">Sieve Analysis Calculation</h1>
+      {/* a toogle will be here to change from fine aggregate to coarse aggregate */}
+      <div className="particle-container">
+        <div>
+          <div>Sieve Size</div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+        <div>
+          <div>Mass retained (g)</div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+        <div>
+          <div>% mass retained</div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+        <div>
+          <div>Cumulative % mass retained</div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+        <div>
+          <div>Cumulative % mass passing</div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+      </div>
       <main className="p-4 w-full max-w-xl flex flex-col items-center">
         <h1 className="text-3xl font-bold mb-4">
           Particle Size Distribution Curve
@@ -82,7 +142,7 @@ export default function Home() {
               link.download = "particle_size_distribution_chart.png";
               link.click();
             }}
-            className="py-2 px-4 bg-yellow-500 text-white rounded-md mt-2 hover:bg-yellow-600 focus:outline-none focus:ring focus:border-yellow-300"
+            className="py-2 px-4 bg-yellow-600 text-white rounded-md mt-2 hover:bg-yellow-700 focus:outline-none focus:ring focus:border-yellow-300"
           >
             Download Chart
           </button>

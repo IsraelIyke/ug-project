@@ -1,0 +1,11 @@
+.particle-container {
+  display: flex;
+  justify-content: center;
+  height: 20rem;
+}
+.particle-container div div {
+  background-color: hsl(43, 74%, 55%);
+  height: 2rem;
+  width: 7rem;
+  margin: 0.1rem;
+}
