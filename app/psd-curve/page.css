@@ -1,8 +1,17 @@
+.container {
+  text-align: center;
+}
 .particle {
   display: flex;
   align-items: center;
   overflow-y: hidden;
   overflow-x: auto;
+  justify-content: center;
+}
+.sub {
+  display: flex;
+  margin-top: 4rem;
+  justify-content: center;
 }
 .particle-sub {
   display: flex;
@@ -27,4 +36,10 @@
 .particle-title {
   height: 3rem;
   background: hsl(43, 74%, 75%);
+}
+
+@media screen and (width < 768px) {
+  .particle {
+    justify-content: left;
+  }
 }
