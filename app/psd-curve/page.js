@@ -3,6 +3,7 @@ import { useState, useEffect, useRef } from "react";
 import Head from "next/head";
 import { Chart } from "chart.js/auto";
 import "./page.css";
+import Navigation from "../component/header";
 
 export default function Home() {
   const chartRef = useRef(null);
@@ -144,6 +145,7 @@ export default function Home() {
 
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       </Head>
+      <Navigation />
       <h1 className="text-2xl font-bold mb-4 mt-4">
         Sieve Analysis Computation For Fine Aggregate
       </h1>
@@ -260,8 +262,13 @@ export default function Home() {
       </div>
 
       <div className="sub">
-        <button onClick={updateState}>click</button>
         <main className="p-4 w-full max-w-xl flex flex-col items-center">
+          <button
+            onClick={updateState}
+            className="py-2 px-4 bg-yellow-600 text-white rounded-md mb-4 hover:bg-yellow-700 focus:outline-none focus:ring focus:border-yellow-300"
+          >
+            Generate PSD Curve
+          </button>
           <h1 className="text-2xl font-bold mb-4">
             Particle Size Distribution Curve
           </h1>
