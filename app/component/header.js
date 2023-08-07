@@ -25,9 +25,9 @@ const Navigation = () => {
             </Link>
           </li>
           <li className="md:mr-6">
-            <a className="text-white" href="#about">
+            <Link className="text-white" href="./psd-curve">
               Sieve Analysis
-            </a>
+            </Link>
           </li>
           <li className="md:mr-6">
             <a className="text-white" href="#services">
