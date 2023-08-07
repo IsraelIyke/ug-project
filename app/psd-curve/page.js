@@ -70,36 +70,87 @@ export default function Home() {
         className="text-2xl font-bold mb-4 mt-4"
         style={{ textAlign: "center" }}
       >
-        Sieve Analysis Calculation
+        Sieve Analysis Computation For Fine Aggregate
       </h1>
       {/* a toogle will be here to change from fine aggregate to coarse aggregate */}
-
-      <div className="particle-container">
-        <div className="particle-sub-container particle-title">
-          <li>Sieve Size</li>
-          <li>Mass retained (g)</li>
-          <li>% mass retained</li>
-          <li>Cumulative % mass retained</li>
-          <li>Cumulative % mass passing</li>
+      <div className="particle">
+        <div className="particle-sub">
+          <div className="particle-tile particle-title">Sieve Size (mm)</div>
+          <div className="particle-tile">4.75</div>
+          <div className="particle-tile">2.36</div>
+          <div className="particle-tile">1.18</div>
+          <div className="particle-tile">0.60</div>
+          <div className="particle-tile">0.30</div>
+          <div className="particle-tile">0.15</div>
+          <div className="particle-tile">Pan</div>
+          <div className="particle-tile">Total</div>
         </div>
-        <div className="particle-sub-container">
-          <li></li>
-
-          <li>
-            <input
-              placeholder="enter mass"
-              style={{
-                width: "100%",
-                paddingLeft: "0.5rem",
-                fontSize: "0.8rem",
-              }}
-            />
-          </li>
-          <li></li>
-          <li></li>
-          <li></li>
+        <div className="particle-sub">
+          <div className="particle-tile particle-title">Mass retained (g)</div>
+          <div className="particle-tile">
+            <input placeholder="enter mass retained" />
+          </div>
+          <div className="particle-tile">
+            <input placeholder="enter mass retained" />
+          </div>
+          <div className="particle-tile">
+            <input placeholder="enter mass retained" />
+          </div>
+          <div className="particle-tile">
+            <input placeholder="enter mass retained" />
+          </div>
+          <div className="particle-tile">
+            <input placeholder="enter mass retained" />
+          </div>
+          <div className="particle-tile">
+            <input placeholder="enter mass retained" />
+          </div>
+          <div className="particle-tile">
+            <input placeholder="enter mass retained" />
+          </div>
+          <div className="particle-tile">
+            <input placeholder="enter mass retained" />
+          </div>
+        </div>
+        <div className="particle-sub">
+          <div className="particle-tile particle-title">% mass retained</div>
+          <div className="particle-tile"></div>
+          <div className="particle-tile"></div>
+          <div className="particle-tile"></div>
+          <div className="particle-tile"></div>
+          <div className="particle-tile"></div>
+          <div className="particle-tile"></div>
+          <div className="particle-tile"></div>
+          <div className="particle-tile"></div>
+        </div>
+        <div className="particle-sub">
+          <div className="particle-tile particle-title">
+            Cumulative % mass retained
+          </div>
+          <div className="particle-tile"></div>
+          <div className="particle-tile"></div>
+          <div className="particle-tile"></div>
+          <div className="particle-tile"></div>
+          <div className="particle-tile"></div>
+          <div className="particle-tile"></div>
+          <div className="particle-tile"></div>
+          <div className="particle-tile"></div>
+        </div>
+        <div className="particle-sub">
+          <div className="particle-tile particle-title">
+            Cumulative % mass passing
+          </div>
+          <div className="particle-tile"></div>
+          <div className="particle-tile"></div>
+          <div className="particle-tile"></div>
+          <div className="particle-tile"></div>
+          <div className="particle-tile"></div>
+          <div className="particle-tile"></div>
+          <div className="particle-tile"></div>
+          <div className="particle-tile"></div>
         </div>
       </div>
+
       {/* <main className="p-4 w-full max-w-xl flex flex-col items-center">
         <h1 className="text-3xl font-bold mb-4">
           Particle Size Distribution Curve

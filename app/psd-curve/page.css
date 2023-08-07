@@ -1,49 +1,29 @@
-.particle-sub-container {
+.particle {
   display: flex;
   justify-content: center;
-  overflow-x: auto;
-  overflow-y: hidden;
-  list-style: none;
-  position: relative;
-  /* padding: 0 0.5rem 0 0.5rem; */
-  width: 98vw;
+  align-items: center;
 }
-.particle-sub-container li {
-  width: 7rem;
+.particle-sub {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.particle-tile {
+  background: hsl(43, 74%, 85%);
+  width: 10rem;
   height: 2rem;
+  margin: 0.1rem;
   text-align: center;
-  background: hsl(43, 74%, 35%);
-  margin: 0.1rem 0;
-  padding: 0.5rem;
   font-size: 0.9rem;
+  font-weight: bold;
 }
-.particle-sub-container li:nth-child(2) {
-  background-color: hsl(43, 74%, 45%);
+.particle-tile input {
+  width: 96%;
+  height: 90%;
+  text-align: center;
+  font-family: "Courier New", Courier, monospace;
 }
-.particle-sub-container li:nth-child(3) {
-  background-color: hsl(43, 74%, 55%);
-}
-.particle-sub-container li:nth-child(4) {
-  background-color: hsl(43, 74%, 65%);
-}
-.particle-sub-container li:nth-child(5) {
-  background-color: hsl(43, 74%, 75%);
-}
-table {
-  font-family: arial, sans-serif;
-  border-collapse: collapse;
-  width: 70%;
-}
-.particle {
-  padding: 0 5% 0 5%;
-}
-td,
-th {
-  border: 1px solid #dddddd;
-  text-align: left;
-  padding: 8px;
-}
-
-tr:nth-child(even) {
-  background-color: #dddddd;
+.particle-title {
+  height: 3rem;
+  background: hsl(43, 74%, 75%);
 }
