@@ -22,3 +22,12 @@ body {
   margin: 0;
   color: rgb(var(--foreground-rgb));
 }
+.nav-list li {
+  background-color: hsla(43, 74%, 45%, 0.534);
+  padding: 0.3rem;
+  margin: 0.1rem;
+  border-radius: 0.5rem;
+}
+.nav-list li:hover {
+  background-color: hsla(43, 74%, 55%, 0.87);
+}

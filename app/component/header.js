@@ -1,5 +1,6 @@
 import { useState } from "react";
-
+import { MdArrowDropDownCircle } from "react-icons/md";
+import Link from "next/link";
 const Navigation = () => {
   const [showMenu, setShowMenu] = useState(false);
 
@@ -8,35 +9,34 @@ const Navigation = () => {
   };
 
   return (
-    <nav className="bg-blue-500 p-4">
-      <div className="flex items-center justify-between">
-        <div className="text-white font-bold text-xl">Your Website Name</div>
+    <nav className="bg-gradient-to-r from-yellow-600 to-white-500 p-3">
+      <div className="flex items-center ">
         {/* Hamburger icon for mobile */}
         <div className="md:hidden">
-          <button onClick={toggleMenu} className="text-white">
-            click
+          <button onClick={toggleMenu}>
+            <MdArrowDropDownCircle style={{ fontSize: "2rem" }} />
           </button>
         </div>
         {/* Navigation links */}
-        <ul className={`md:flex ${showMenu ? "block" : "hidden"}`}>
-          <li className="md:mr-4">
-            <a className="text-white hover:text-gray-200" href="#home">
+        <ul className={`md:flex ${showMenu ? "block" : "hidden"} nav-list`}>
+          <li className="md:mr-6">
+            <Link className="text-white" href="./">
               Home
+            </Link>
+          </li>
+          <li className="md:mr-6">
+            <a className="text-white" href="#about">
+              Sieve Analysis
             </a>
           </li>
-          <li className="md:mr-4">
-            <a className="text-white hover:text-gray-200" href="#about">
-              About
+          <li className="md:mr-6">
+            <a className="text-white" href="#services">
+              Mix Proportion&Cost
             </a>
           </li>
-          <li className="md:mr-4">
-            <a className="text-white hover:text-gray-200" href="#services">
-              Services
-            </a>
-          </li>
-          <li className="md:mr-4">
-            <a className="text-white hover:text-gray-200" href="#contact">
-              Contact
+          <li className="md:mr-6">
+            <a className="text-white" href="#contact">
+              Calculators
             </a>
           </li>
         </ul>

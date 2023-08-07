@@ -103,7 +103,7 @@ export default function Home() {
           {
             label: "Particle Size Distribution",
             data: dataPoints,
-            borderColor: "rgba(75, 192, 192, 1)",
+            borderColor: "hsl(43, 74%, 55%)",
             fill: false,
             tension: 0.4,
           },
