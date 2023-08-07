@@ -64,7 +64,7 @@ export default function Home() {
       <Head>
         <title>Particle Size Distribution Curve</title>
 
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="viewport" content="width=device-width, initial-scale=2.0" />
       </Head>
       <h1
         className="text-2xl font-bold mb-4 mt-4"
