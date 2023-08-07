@@ -8,13 +8,27 @@ import Navigation from "../component/header";
 export default function Home() {
   const chartRef = useRef(null);
 
-  const [mass1, setMass1] = useState(0);
-  const [mass2, setMass2] = useState(0);
-  const [mass3, setMass3] = useState(0);
-  const [mass4, setMass4] = useState(0);
-  const [mass5, setMass5] = useState(0);
-  const [mass6, setMass6] = useState(0);
-  const [mass7, setMass7] = useState(0);
+  const [mass1, setMass1] = useState(() => {
+    return 0;
+  });
+  const [mass2, setMass2] = useState(() => {
+    return 0;
+  });
+  const [mass3, setMass3] = useState(() => {
+    return 0;
+  });
+  const [mass4, setMass4] = useState(() => {
+    return 0;
+  });
+  const [mass5, setMass5] = useState(() => {
+    return 0;
+  });
+  const [mass6, setMass6] = useState(() => {
+    return 0;
+  });
+  const [mass7, setMass7] = useState(() => {
+    return 0;
+  });
 
   const mass =
     parseFloat(mass1) +
@@ -166,7 +180,7 @@ export default function Home() {
           <div className="particle-tile particle-title">Mass retained (g)</div>
           <div className="particle-tile">
             <input
-              placeholder="enter mass retained"
+              placeholder="enter 4.75mm retained"
               name="mass1"
               value={mass1}
               onChange={(e) => setMass1(e.target.value)}
@@ -174,7 +188,7 @@ export default function Home() {
           </div>
           <div className="particle-tile">
             <input
-              placeholder="enter mass retained"
+              placeholder="enter 2.36mm retained"
               name="mass2"
               value={mass2}
               onChange={(e) => setMass2(e.target.value)}
@@ -182,7 +196,7 @@ export default function Home() {
           </div>
           <div className="particle-tile">
             <input
-              placeholder="enter mass retained"
+              placeholder="enter 1.18mm retained"
               name="mass3"
               value={mass3}
               onChange={(e) => setMass3(e.target.value)}
@@ -190,7 +204,7 @@ export default function Home() {
           </div>
           <div className="particle-tile">
             <input
-              placeholder="enter mass retained"
+              placeholder="enter 0.60mm retained"
               name="mass4"
               value={mass4}
               onChange={(e) => setMass4(e.target.value)}
@@ -198,7 +212,7 @@ export default function Home() {
           </div>
           <div className="particle-tile">
             <input
-              placeholder="enter mass retained"
+              placeholder="enter 0.30mm retained"
               name="mass5"
               value={mass5}
               onChange={(e) => setMass5(e.target.value)}
@@ -206,7 +220,7 @@ export default function Home() {
           </div>
           <div className="particle-tile">
             <input
-              placeholder="enter mass retained"
+              placeholder="enter 0.15mm retained"
               name="mass6"
               value={mass6}
               onChange={(e) => setMass6(e.target.value)}
@@ -214,7 +228,7 @@ export default function Home() {
           </div>
           <div className="particle-tile">
             <input
-              placeholder="enter mass retained"
+              placeholder="enter Pan retained"
               name="mass7"
               value={mass7}
               onChange={(e) => setMass7(e.target.value)}
@@ -224,45 +238,92 @@ export default function Home() {
         </div>
         <div className="particle-sub">
           <div className="particle-tile particle-title">% mass retained</div>
-          <div className="particle-tile">{percentRetained1.toFixed(2)}</div>
-          <div className="particle-tile">{percentRetained2.toFixed(2)}</div>
-          <div className="particle-tile">{percentRetained3.toFixed(2)}</div>
-          <div className="particle-tile">{percentRetained4.toFixed(2)}</div>
-          <div className="particle-tile">{percentRetained5.toFixed(2)}</div>
-          <div className="particle-tile">{percentRetained6.toFixed(2)}</div>
-          <div className="particle-tile">{percentRetained7.toFixed(2)}</div>
+          <div className="particle-tile">
+            {percentRetained1 ? percentRetained1.toFixed(2) : "-"}
+          </div>
+          <div className="particle-tile">
+            {percentRetained2 ? percentRetained2.toFixed(2) : "-"}
+          </div>
+          <div className="particle-tile">
+            {percentRetained3 ? percentRetained3.toFixed(2) : "-"}
+          </div>
+          <div className="particle-tile">
+            {percentRetained4 ? percentRetained4.toFixed(2) : "-"}
+          </div>
+          <div className="particle-tile">
+            {percentRetained5 ? percentRetained5.toFixed(2) : "-"}
+          </div>
+          <div className="particle-tile">
+            {percentRetained6 ? percentRetained6.toFixed(2) : "-"}
+          </div>
+          <div className="particle-tile">
+            {percentRetained7 ? percentRetained7.toFixed(2) : "-"}
+          </div>
           <div className="particle-tile"></div>
         </div>
         <div className="particle-sub">
           <div className="particle-tile particle-title">
             Cumulative % mass retained
           </div>
-          <div className="particle-tile">{cRetained1.toFixed(2)}</div>
-          <div className="particle-tile">{cRetained2.toFixed(2)}</div>
-          <div className="particle-tile">{cRetained3.toFixed(2)}</div>
-          <div className="particle-tile">{cRetained4.toFixed(2)}</div>
-          <div className="particle-tile">{cRetained5.toFixed(2)}</div>
-          <div className="particle-tile">{cRetained6.toFixed(2)}</div>
-          <div className="particle-tile">{cRetained7.toFixed(2)}</div>
-          <div className="particle-tile">{cRetained.toFixed(2)}</div>
+          <div className="particle-tile">
+            {cRetained1 ? cRetained1.toFixed(2) : "-"}
+          </div>
+          <div className="particle-tile">
+            {cRetained2 ? cRetained2.toFixed(2) : "-"}
+          </div>
+          <div className="particle-tile">
+            {cRetained3 ? cRetained3.toFixed(2) : "-"}
+          </div>
+          <div className="particle-tile">
+            {cRetained4 ? cRetained4.toFixed(2) : "-"}
+          </div>
+          <div className="particle-tile">
+            {cRetained5 ? cRetained5.toFixed(2) : "-"}
+          </div>
+          <div className="particle-tile">
+            {cRetained6 ? cRetained6.toFixed(2) : "-"}
+          </div>
+          <div className="particle-tile">
+            {cRetained7 ? cRetained7.toFixed(2) : "-"}
+          </div>
+          <div className="particle-tile">
+            {cRetained ? cRetained.toFixed(2) : "-"}
+          </div>
         </div>
         <div className="particle-sub">
           <div className="particle-tile particle-title">
             Cumulative % mass passing
           </div>
-          <div className="particle-tile">{pRetained1.toFixed(2)}</div>
-          <div className="particle-tile">{pRetained2.toFixed(2)}</div>
-          <div className="particle-tile">{pRetained3.toFixed(2)}</div>
-          <div className="particle-tile">{pRetained4.toFixed(2)}</div>
-          <div className="particle-tile">{pRetained5.toFixed(2)}</div>
-          <div className="particle-tile">{pRetained6.toFixed(2)}</div>
-          <div className="particle-tile">{pRetained7.toFixed(2)}</div>
+          <div className="particle-tile">
+            {pRetained1 ? pRetained1.toFixed(2) : "-"}
+          </div>
+          <div className="particle-tile">
+            {pRetained2 ? pRetained2.toFixed(2) : "-"}
+          </div>
+          <div className="particle-tile">
+            {pRetained3 ? pRetained3.toFixed(2) : "-"}
+          </div>
+          <div className="particle-tile">
+            {pRetained4 ? pRetained4.toFixed(2) : "-"}
+          </div>
+          <div className="particle-tile">
+            {pRetained5 ? pRetained5.toFixed(2) : "-"}
+          </div>
+          <div className="particle-tile">
+            {pRetained6 ? pRetained6.toFixed(2) : "-"}
+          </div>
+          <div className="particle-tile">
+            {pRetained7 ? pRetained7.toFixed(2) : "-"}
+          </div>
           <div className="particle-tile"></div>
         </div>
       </div>
 
       <div className="sub">
         <main className="p-4 w-full max-w-xl flex flex-col items-center">
+          <div className="mb-5">
+            Fineness Modulus = {cRetained ? cRetained / 100 : "--"}
+          </div>
           <button
             onClick={updateState}
             className="py-2 px-4 bg-yellow-600 text-white rounded-md mb-4 hover:bg-yellow-700 focus:outline-none focus:ring focus:border-yellow-300"

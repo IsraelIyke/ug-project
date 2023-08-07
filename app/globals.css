@@ -31,3 +31,8 @@ body {
 .nav-list li:hover {
   background-color: hsla(43, 74%, 55%, 0.87);
 }
+@media screen and (width < 768px) {
+  .card {
+    flex-direction: column;
+  }
+}

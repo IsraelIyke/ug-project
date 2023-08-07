@@ -19,21 +19,16 @@ const Navigation = () => {
         </div>
         {/* Navigation links */}
         <ul className={`md:flex ${showMenu ? "block" : "hidden"} nav-list`}>
-          <li className="md:mr-6">
-            <Link className="text-white" href="./">
-              Home
-            </Link>
-          </li>
-          <li className="md:mr-6">
-            <Link className="text-white" href="./psd-curve">
-              Sieve Analysis
-            </Link>
-          </li>
-          <li className="md:mr-6">
-            <a className="text-white" href="#services">
-              Mix Proportion&Cost
-            </a>
-          </li>
+          <Link className="text-white" href="./">
+            {" "}
+            <li className="md:mr-6">Home</li>{" "}
+          </Link>
+          <Link className="text-white" href="./psd-curve">
+            <li className="md:mr-6">Sieve Analysis</li>
+          </Link>
+          <Link className="text-white" href="./mix-proportion">
+            <li className="md:mr-6">Mix Proportion&Cost</li>{" "}
+          </Link>
           <li className="md:mr-6">
             <a className="text-white" href="#contact">
               Calculators
