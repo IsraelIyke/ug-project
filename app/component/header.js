@@ -9,7 +9,8 @@ const Navigation = () => {
   };
 
   return (
-    <nav className="bg-gradient-to-r from-yellow-600 to-white-500 p-3">
+    // <nav className="bg-gradient-to-r from-yellow-600 to-white-500 p-3">
+    <nav className="bg-yellow-600 p-3">
       <div className="flex items-center ">
         {/* Hamburger icon for mobile */}
         <div className="md:hidden">

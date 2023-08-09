@@ -153,14 +153,14 @@ export default function Home() {
   }, [dataPoints]);
 
   return (
-    <div className="container">
+    <div className="">
       <Head>
         <title>Particle Size Distribution Curve</title>
 
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       </Head>
       <Navigation />
-      <h1 className="text-2xl font-bold mb-4 mt-4">
+      <h1 className="text-2xl font-bold mb-4 mt-4 text-center">
         Sieve Analysis Computation For Fine Aggregate
       </h1>
       {/* a toogle will be here to change from fine aggregate to coarse aggregate */}
