@@ -1,0 +1,8 @@
+input {
+  background-color: hsl(43, 74%, 69%);
+  width: 2.5rem;
+  text-align: center;
+}
+.chart {
+  width: 50vw;
+}
