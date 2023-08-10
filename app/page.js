@@ -49,7 +49,7 @@ export default function Home() {
               </p>
             </div>
           </Link>
-          <Link href="./calculator">
+          <Link href="./converter">
             <div className="m-2 bg-yellow-600 p-5 rounded text-white hover:bg-yellow-700">
               <h2 className="font-bold mb-2 underline">
                 Calculators and Charts

@@ -23,10 +23,11 @@ body {
   color: rgb(var(--foreground-rgb));
 }
 .nav-list li {
-  background-color: hsla(43, 74%, 45%, 0.534);
+  background-color: transparent;
   padding: 0.3rem;
   margin: 0.1rem;
   border-radius: 0.5rem;
+  transition: 0.3s ease-in-out;
 }
 .nav-list li:hover {
   background-color: hsla(43, 74%, 55%, 0.87);
@@ -34,5 +35,13 @@ body {
 @media screen and (width < 768px) {
   .card {
     flex-direction: column;
+  }
+  .nav-list {
+    text-align: center;
+  }
+  .nav {
+    /* justify-content: space-between; */
+    flex-direction: column;
+    align-items: center;
   }
 }

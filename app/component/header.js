@@ -11,7 +11,7 @@ const Navigation = () => {
   return (
     // <nav className="bg-gradient-to-r from-yellow-600 to-white-500 p-3">
     <nav className="bg-yellow-600 p-3">
-      <div className="flex items-center ">
+      <div className="flex nav">
         {/* Hamburger icon for mobile */}
         <div className="md:hidden">
           <button onClick={toggleMenu}>
@@ -30,8 +30,8 @@ const Navigation = () => {
           <Link className="text-white" href="./mix-proportion">
             <li className="md:mr-6">Mix Proportion&Cost</li>{" "}
           </Link>
-          <Link className="text-white" href="./calculator">
-            <li className="md:mr-6">Calculators</li>
+          <Link className="text-white" href="./converter">
+            <li className="md:mr-6">Converter&Chart</li>
           </Link>
         </ul>
       </div>
