@@ -28,13 +28,20 @@ export default function Mix() {
   const [secondReplaceDensity, setSecondReplaceDensity] = useState(0);
   const [wToCRatio, setWToCRatio] = useState(0);
 
+  // if(firstReplaceRatio){
+  //   setCoarse(prev => prev*)
+  // }else if(secondReplaceVol){} else if(firstReplaceRatio && secondReplaceVol){
+
+  // }
+
   const cVol =
     (parseFloat(cLength) / 1000) *
     (parseFloat(cWidth) / 1000) *
     (parseFloat(cHeight) / 1000);
   const cementVol = (cement / sumRatio) * 1.54 * parseFloat(cTotal) * cVol;
   const sandVol = (sand / sumRatio) * 1.54 * parseFloat(cTotal) * cVol;
-  const coarseVol = (coarse / sumRatio) * 1.54 * parseFloat(cTotal) * cVol;
+  const coarseVol =
+    (newCoarseRatio / sumRatio) * 1.54 * parseFloat(cTotal) * cVol;
   const firstReplaceVol =
     (firstReplaceRatio / sumRatio) * 1.54 * parseFloat(cTotal) * cVol;
   const secondReplaceVol =
@@ -53,7 +60,8 @@ export default function Mix() {
     (parseFloat(fHeight) / 1000);
   const cementVolF = (cement / sumRatio) * 1.54 * parseFloat(fTotal) * fVol;
   const sandVolF = (sand / sumRatio) * 1.54 * parseFloat(fTotal) * fVol;
-  const coarseVolF = (coarse / sumRatio) * 1.54 * parseFloat(fTotal) * fVol;
+  const coarseVolF =
+    (newCoarseRatio / sumRatio) * 1.54 * parseFloat(fTotal) * fVol;
   const firstReplaceVolF =
     (firstReplaceRatio / sumRatio) * 1.54 * parseFloat(fTotal) * fVol;
   const secondReplaceVolF =

@@ -6,25 +6,30 @@ import "./page.css";
 import Navigation from "../component/header";
 import { MdToggleOff, MdToggleOn } from "react-icons/md";
 const Home = () => {
-  const [C, setC] = useState();
-  const [C14, setC14] = useState();
-  const [C21, setC21] = useState();
-  const [C28, setC28] = useState();
+  const [label1, setLabel1] = useState("1st mix");
+  const [label2, setLabel2] = useState("2nd mix");
+  const [label3, setLabel3] = useState("3rd mix");
+  const [label4, setLabel4] = useState("4th mix");
 
-  const [CP, setCP] = useState();
-  const [CP14, setCP14] = useState();
-  const [CP21, setCP21] = useState();
-  const [CP28, setCP28] = useState();
+  const [C, setC] = useState(0);
+  const [C14, setC14] = useState(0);
+  const [C21, setC21] = useState(0);
+  const [C28, setC28] = useState(0);
 
-  const [CG, setCG] = useState();
-  const [CG14, setCG14] = useState();
-  const [CG21, setCG21] = useState();
-  const [CG28, setCG28] = useState();
+  const [CP, setCP] = useState(0);
+  const [CP14, setCP14] = useState(0);
+  const [CP21, setCP21] = useState(0);
+  const [CP28, setCP28] = useState(0);
 
-  const [CGP, setCGP] = useState();
-  const [CGP14, setCGP14] = useState();
-  const [CGP21, setCGP21] = useState();
-  const [CGP28, setCGP28] = useState();
+  const [CG, setCG] = useState(0);
+  const [CG14, setCG14] = useState(0);
+  const [CG21, setCG21] = useState(0);
+  const [CG28, setCG28] = useState(0);
+
+  const [CGP, setCGP] = useState(0);
+  const [CGP14, setCGP14] = useState(0);
+  const [CGP21, setCGP21] = useState(0);
+  const [CGP28, setCGP28] = useState(0);
 
   const [cLength, setCLength] = useState(0);
   const [cWidth, setCWidth] = useState(0);
@@ -50,17 +55,19 @@ const Home = () => {
     if (toggle) {
       mixesData = [
         {
-          label: "1st Mix",
+          label: `${C || C14 || C21 || C28 ? label1 : ""}`,
           data: [
             (C * 1000) / cArea,
             (C14 * 1000) / cArea,
             (C21 * 1000) / cArea,
             (C28 * 1000) / cArea,
           ],
-          backgroundColor: "hsl(43, 74%, 19%)",
+          backgroundColor: `${
+            C || C14 || C21 || C28 ? "hsl(43, 74%, 19%)" : "transparent"
+          }`,
         },
         {
-          label: "2nd Mix",
+          label: `${CP || CP14 || CP21 || CP28 ? label2 : ""}`,
           data: [
             (CP * 1000) / cArea,
             (CP14 * 1000) / cArea,
@@ -68,10 +75,12 @@ const Home = () => {
             (CP28 * 1000) / cArea,
           ],
 
-          backgroundColor: "hsl(43, 74%, 39%)",
+          backgroundColor: `${
+            CP || CP14 || CP21 || CP28 ? "hsl(43, 74%, 39%)" : "transparent"
+          }`,
         },
         {
-          label: "3rd Mix",
+          label: `${CG || CG14 || CG21 || CG28 ? label3 : ""}`,
           data: [
             (CG * 1000) / cArea,
             (CG14 * 1000) / cArea,
@@ -79,10 +88,12 @@ const Home = () => {
             (CG28 * 1000) / cArea,
           ],
 
-          backgroundColor: "hsl(43, 74%, 59%)",
+          backgroundColor: `${
+            CG || CG14 || CG21 || CG28 ? "hsl(43, 74%, 59%)" : "transparent"
+          }`,
         },
         {
-          label: "4th Mix",
+          label: `${CGP || CGP14 || CGP21 || CGP28 ? label4 : ""}`,
           data: [
             (CGP * 1000) / cArea,
             (CGP14 * 1000) / cArea,
@@ -90,23 +101,27 @@ const Home = () => {
             (CGP28 * 1000) / cArea,
           ],
 
-          backgroundColor: "hsl(43, 74%, 79%)",
+          backgroundColor: `${
+            CGP || CGP14 || CGP21 || CGP28 ? "hsl(43, 74%, 79%)" : "transparent"
+          }`,
         },
       ];
     } else {
       mixesData = [
         {
-          label: "1st Mix",
+          label: `${C || C14 || C21 || C28 ? label1 : ""}`,
           data: [
             (C * 1000 * parseFloat(cLength) * 4.4482) / cVol,
             (C14 * 1000 * parseFloat(cLength) * 4.4482) / cVol,
             (C21 * 1000 * parseFloat(cLength) * 4.4482) / cVol,
             (C28 * 1000 * parseFloat(cLength) * 4.4482) / cVol,
           ],
-          backgroundColor: "hsl(43, 74%, 19%)",
+          backgroundColor: `${
+            C || C14 || C21 || C28 ? "hsl(43, 74%, 19%)" : "transparent"
+          }`,
         },
         {
-          label: "2nd Mix",
+          label: `${CP || CP14 || CP21 || CP28 ? label2 : ""}`,
           data: [
             (CP * 1000 * parseFloat(cLength) * 4.4482) / cVol,
             (CP14 * 1000 * parseFloat(cLength) * 4.4482) / cVol,
@@ -114,10 +129,12 @@ const Home = () => {
             (CP28 * 1000 * parseFloat(cLength) * 4.4482) / cVol,
           ],
 
-          backgroundColor: "hsl(43, 74%, 39%)",
+          backgroundColor: `${
+            CP || CP14 || CP21 || CP28 ? "hsl(43, 74%, 39%)" : "transparent"
+          }`,
         },
         {
-          label: "3rd Mix",
+          label: `${CG || CG14 || CG21 || CG28 ? label3 : ""}`,
           data: [
             (CG * 1000 * parseFloat(cLength) * 4.4482) / cVol,
             (CG14 * 1000 * parseFloat(cLength) * 4.4482) / cVol,
@@ -125,10 +142,12 @@ const Home = () => {
             (CG28 * 1000 * parseFloat(cLength) * 4.4482) / cVol,
           ],
 
-          backgroundColor: "hsl(43, 74%, 59%)",
+          backgroundColor: `${
+            CG || CG14 || CG21 || CG28 ? "hsl(43, 74%, 59%)" : "transparent"
+          }`,
         },
         {
-          label: "4th Mix",
+          label: `${CGP || CGP14 || CGP21 || CGP28 ? label4 : ""}`,
           data: [
             (CGP * 1000 * parseFloat(cLength) * 4.4482) / cVol,
             (CGP14 * 1000 * parseFloat(cLength) * 4.4482) / cVol,
@@ -136,7 +155,9 @@ const Home = () => {
             (CGP28 * 1000 * parseFloat(cLength) * 4.4482) / cVol,
           ],
 
-          backgroundColor: "hsl(43, 74%, 79%)",
+          backgroundColor: `${
+            CGP || CGP14 || CGP21 || CGP28 ? "hsl(43, 74%, 79%)" : "transparent"
+          }`,
         },
       ];
     }
@@ -163,7 +184,7 @@ const Home = () => {
               beginAtZero: true,
               title: {
                 display: true,
-                text: "Compressive Strength (MPa)",
+                text: `${toggle ? "Compressive" : "Flexural"} Strength (MPa)`,
               },
             },
             x: {
@@ -223,7 +244,42 @@ const Home = () => {
           />{" "}
           mm
         </div>
-
+        <div>
+          Label for 1st mix(optional){" "}
+          <input
+            value={label1}
+            name="label1"
+            onChange={(e) => setLabel1(e.target.value)}
+            style={{ width: "9rem", marginTop: "0.5rem" }}
+          />
+        </div>
+        <div>
+          Label for 2nd mix(optional){" "}
+          <input
+            value={label2}
+            name="label2"
+            onChange={(e) => setLabel2(e.target.value)}
+            style={{ width: "9rem", marginTop: "0.5rem" }}
+          />
+        </div>
+        <div>
+          Label for 3rd mix(optional){" "}
+          <input
+            value={label3}
+            name="label3"
+            onChange={(e) => setLabel3(e.target.value)}
+            style={{ width: "9rem", marginTop: "0.5rem" }}
+          />
+        </div>
+        <div>
+          Label for 4th mix(optional){" "}
+          <input
+            value={label4}
+            name="label4"
+            onChange={(e) => setLabel4(e.target.value)}
+            style={{ width: "9rem", marginTop: "0.5rem" }}
+          />
+        </div>
         <p className="mt-5">
           Enter the failure load {toggle ? "(kN)" : "(lb)"} to convert to
           {toggle ? " Compressive" : " Flexural"} Strength (MPa){" "}

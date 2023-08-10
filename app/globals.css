@@ -21,6 +21,7 @@ body {
   padding: 0;
   margin: 0;
   color: rgb(var(--foreground-rgb));
+  -webkit-tap-highlight-color: transparent;
 }
 .nav-list li {
   background-color: transparent;
