@@ -13,7 +13,7 @@ export default function Home() {
       </Head>
       <Navigation />
       <div className="">
-        <h1 className="text-2xl font-bold mb-4 mt-4 pr-4 pl-10 text-center">
+        <h1 className="text-2xl font-bold mb-4 mt-4 p-4 text-center">
           The Mechanical Properties of Concrete with Partial Replacement of
           Coarse Aggregate with Glass and the Influence of Polystyrene Addition
         </h1>
@@ -49,7 +49,7 @@ export default function Home() {
               </p>
             </div>
           </Link>
-          <Link href="./calculators">
+          <Link href="./calculator">
             <div className="m-2 bg-yellow-600 p-5 rounded text-white hover:bg-yellow-700">
               <h2 className="font-bold mb-2 underline">
                 Calculators and Charts

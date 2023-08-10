@@ -30,11 +30,9 @@ const Navigation = () => {
           <Link className="text-white" href="./mix-proportion">
             <li className="md:mr-6">Mix Proportion&Cost</li>{" "}
           </Link>
-          <li className="md:mr-6">
-            <a className="text-white" href="#contact">
-              Calculators
-            </a>
-          </li>
+          <Link className="text-white" href="./calculator">
+            <li className="md:mr-6">Calculators</li>
+          </Link>
         </ul>
       </div>
     </nav>

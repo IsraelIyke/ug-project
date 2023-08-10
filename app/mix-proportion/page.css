@@ -1,6 +1,6 @@
 .mix-container input {
   background-color: hsl(43, 74%, 69%);
-  width: 2rem;
+  width: 2.5rem;
   text-align: center;
 }
 
@@ -23,6 +23,7 @@
   width: 7rem;
   border-bottom: 1px solid white;
   border-right: 1px solid white;
+  padding: 0.5rem;
 }
 .mix-title div {
   height: 3.2rem;
