@@ -22,7 +22,7 @@ export default function Home() {
           to help other student that will decide to work on the same or similar
           topic in the future.
         </p>
-        <div className="p-5 flex justify-center flex-row sm:flex-col card text-center">
+        <div className="p-5 flex justify-center md:flex-row sm:flex-col card text-center">
           <Link href="./psd-curve">
             <div className="m-2 bg-yellow-600 p-5 rounded text-white hover:bg-yellow-700">
               <h2 className="font-bold mb-2 underline">
