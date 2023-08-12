@@ -284,7 +284,7 @@ const Home = () => {
           Enter the failure load {toggle ? "(kN)" : "(lb)"} to convert to
           {toggle ? " Compressive" : " Flexural"} Strength (MPa){" "}
         </p>
-        <div className="result-container mt-5">
+        <div className="result-container mt-5 flex justify-left md:justify-center">
           <div>
             <div style={{ background: "white" }}></div>
             <div style={{ background: "white" }}></div>
