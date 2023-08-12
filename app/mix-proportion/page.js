@@ -72,7 +72,7 @@ export default function Mix() {
       {}
       <Navigation />
       <div className="mix-sub pl-4 mt-4 text-center">
-        <h2 className="text-2xl mb-6 underline">Mix Proportion Calculation</h2>
+        <h2 className="text-2xl mb-4 text-bold">Mix Proportion Calculation</h2>
         <div className="mt-1">
           Concrete grade ratio
           <input
@@ -217,8 +217,8 @@ export default function Mix() {
             onChange={(e) => setWToCRatio(e.target.value)}
           />
         </div>
-        <h3 className="mt-9 text-2xl underline">Summary for Compression</h3>
-        <div className="mix-table text-center mt-4 rounded mb-8 mix">
+        <h3 className="mt-9 text-2xl">Summary for Compression</h3>
+        <div className="mix-table text-center mt-4 rounded mb-8 mix justify-left md:justify-center">
           <div className=" mix-title">
             <div style={{ background: "white" }}></div>
             <div>
@@ -283,8 +283,8 @@ export default function Mix() {
           </div>
         </div>
 
-        <h3 className="mt-9 text-2xl underline">Summary for Flexural</h3>
-        <div className="mix-table text-center mt-4 rounded mb-8 mix">
+        <h3 className="mt-9 text-2xl">Summary for Flexural</h3>
+        <div className="mix-table text-center mt-4 rounded mb-8 mix justify-left md:justify-center">
           <div className=" mix-title">
             <div style={{ background: "white" }}></div>
             <div>
