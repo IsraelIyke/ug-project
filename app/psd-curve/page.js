@@ -164,7 +164,7 @@ export default function Home() {
         Sieve Analysis Computation For Fine Aggregate
       </h1>
       {/* a toogle will be here to change from fine aggregate to coarse aggregate */}
-      <div className="particle">
+      <div className="particle sm:justify-left">
         <div className="particle-sub">
           <div className="particle-tile particle-title">Sieve Size (mm)</div>
           <div className="particle-tile">4.75</div>
