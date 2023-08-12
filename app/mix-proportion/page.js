@@ -72,7 +72,7 @@ export default function Mix() {
       {}
       <Navigation />
       <div className="mix-sub pl-4 mt-4 text-center">
-        <h2 className="text-2xl mb-4 text-bold">Mix Proportion Calculation</h2>
+        <h2 className="text-2xl mb-4 font-bold">Mix Proportion Calculation</h2>
         <div className="mt-1">
           Concrete grade ratio
           <input
