@@ -218,7 +218,7 @@ export default function Mix() {
           />
         </div>
         <h3 className="mt-9 text-2xl">Summary for Compression</h3>
-        <div className="mix-table text-center mt-4 rounded mb-8 mix justify-left md:justify-center">
+        <div className="text-center mt-4 rounded mb-8 mix justify-left md:justify-center">
           <div className=" mix-title">
             <div style={{ background: "white" }}></div>
             <div>
@@ -284,7 +284,7 @@ export default function Mix() {
         </div>
 
         <h3 className="mt-9 text-2xl">Summary for Flexural</h3>
-        <div className="mix-table text-center mt-4 rounded mb-8 mix justify-left md:justify-center">
+        <div className="text-center mt-4 rounded mb-8 mix justify-left md:justify-center">
           <div className=" mix-title">
             <div style={{ background: "white" }}></div>
             <div>
