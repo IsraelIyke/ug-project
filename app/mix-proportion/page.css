@@ -9,14 +9,8 @@
   align-items: center;
   overflow-y: hidden;
   overflow-x: auto;
-  justify-content: center;
-}
-.mix-table {
-  /* width: 16rem; */
+  
   height: auto;
-  /* background-color: red; */
-  overflow-y: hidden;
-  overflow-x: auto;
 }
 .mix-field div {
   height: 3.2rem;
