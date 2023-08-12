@@ -9,9 +9,7 @@ input {
 .result-container {
   overflow-y: hidden;
   overflow-x: auto;
-  display: flex;
   width: 98vw;
-  justify-content: center;
 }
 .result-container div {
   background-color: hsl(43, 74%, 49%);
@@ -35,7 +33,7 @@ input {
   display: flex;
 }
 @media screen and (width < 768px) {
-  .chart {
+  .chart canvas{
     width: 98vw;
   }
   .result-container {
